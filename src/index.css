@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: "Valley";
+    src: url('./assets/fonts/Valley.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('./assets/fonts/Inter.ttf');
+}
+
+@font-face {
+    font-family: "Inder";
+    src: url('./assets/fonts/Inder.ttf');
+}
+
+@font-face {
+    font-family: "Syne";
+    src: url('./assets/fonts/Syne.ttf');
+}
+
+@keyframes Floating{
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.green-ball-dot {
+    animation: Floating 2s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.coffeecup:hover img {
+    animation: spin 1s;
+}

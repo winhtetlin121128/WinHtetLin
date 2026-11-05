@@ -1,0 +1,41 @@
+[
+    {
+        "title" : "Gradient",
+        "description" : "Gradient is a full-stack management app for community. The app handle Event, Registeration, Member and etc...., if a community running without profit you can request.",
+        "size" : "M",
+        "status" : "40%",
+        "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript", "Prisma", "Postgresql", "Uploadthing"],
+        "source" : "",
+        "demo" : ""
+    },
+
+    {
+        "title" : "UI Playground",
+        "description" : "UI Playground is a frontend project for young learner and some developer who want to generate style with just touch, such as border-radius, shadow, color-hex and etc......",
+        "size" : "S",
+        "status" : "100%",
+        "tech" : ["React", "TailwindCss"],
+        "source" : "",
+        "demo" : ""
+    },
+
+    {
+        "title" : "The Coffee Club",
+        "description" : "The Coffee Club is a full-stack landing site for English learners and admin. Included club information, Docummentation, up-to-date events and news, registeration and record.",
+        "size" : "S",
+        "status" : "90%",
+        "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript"],
+        "source" : "",
+        "demo" : ""
+    },
+
+    {
+        "title" : "Portfolio",
+        "description" : "Portfolio is a front-end only profile website, for give and take information, sharing about me and selected projects.",
+        "size" : "S",
+        "status" : "100%",
+        "tech" : ["React", "TailwindCss", "Motion"],
+        "source" : "",
+        "demo" : ""
+    }
+]
