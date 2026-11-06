@@ -4,7 +4,7 @@ import Linkedin from '../../public/linkedin.png';
 
 export default function Home() {
     return (
-        <div className="w-full h-screen lg:h-[100%] flex justify-center items-start">
+        <div className="w-full h-[100%] flex justify-center items-start">
             <div className="w-full lg:w-320 pt-30 p-3 flex flex-col justify-center items-center lg:items-start border-b border-[#000]/20 pb-20">
                 <span className="flex w-fit text-[13px] justify-center gap-2 items-center h-7 border border-[#000]/20 pl-4 pr-4 pt-1 pb-1 font-[Valley] text-[#000]/60 rounded-3xl"><div className="w-2 h-2 rounded-3xl bg-green-600 green-ball-dot"></div>Open to full-stack roles</span>
 
