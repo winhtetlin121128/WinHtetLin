@@ -5,7 +5,7 @@
         "size" : "M",
         "status" : "40%",
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript", "Prisma", "Postgresql", "Uploadthing"],
-        "img" : "../../public/Gradient2.png",
+        "img" : "/project/Gradient2.png",
         "source" : "",
         "demo" : ""
     },
