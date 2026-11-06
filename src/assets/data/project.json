@@ -5,9 +5,10 @@
         "size" : "M",
         "status" : "40%",
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript", "Prisma", "Postgresql", "Uploadthing"],
-        "img" : "/project/Gradient2.png",
+        "img" : "/project/Gradient.png",
         "source" : "",
-        "demo" : ""
+        "demo" : "",
+        "category" : ["Real Project", "Development", "System"]
     },
 
     {
@@ -16,9 +17,10 @@
         "size" : "S",
         "status" : "100%",
         "tech" : ["React", "TailwindCss"],
-        "img" : "",
+        "img" : "/project/UIPlayground.png",
         "source" : "",
-        "demo" : ""
+        "demo" : "",
+        "category" : ["Case Study", "Development", "Web-App"]
     },
 
     {
@@ -27,9 +29,10 @@
         "size" : "S",
         "status" : "90%",
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript"],
-        "img" : "",
+        "img" : "/project/CoffeeClub.png",
         "source" : "",
-        "demo" : ""
+        "demo" : "",
+        "category" : ["Real Project", "Development", "Landing"]
     },
 
     {
@@ -40,6 +43,7 @@
         "tech" : ["React", "TailwindCss", "Motion"],
         "img" : "",
         "source" : "",
-        "demo" : ""
+        "demo" : "",
+        "category" : []
     }
 ]

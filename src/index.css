@@ -50,3 +50,16 @@ body::-webkit-scrollbar {
 .coffeecup:hover img {
     animation: spin 1s;
 }
+
+@keyframes FloatingButton {
+    0%,100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.floating-button {
+    animation: FloatingButton 2s infinite;
+}
