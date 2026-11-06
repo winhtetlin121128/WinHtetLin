@@ -5,6 +5,7 @@
         "size" : "M",
         "status" : "40%",
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript", "Prisma", "Postgresql", "Uploadthing"],
+        "img" : "../../public/Gradient2.png",
         "source" : "",
         "demo" : ""
     },
@@ -15,6 +16,7 @@
         "size" : "S",
         "status" : "100%",
         "tech" : ["React", "TailwindCss"],
+        "img" : "",
         "source" : "",
         "demo" : ""
     },
@@ -25,6 +27,7 @@
         "size" : "S",
         "status" : "90%",
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript"],
+        "img" : "",
         "source" : "",
         "demo" : ""
     },
@@ -35,6 +38,7 @@
         "size" : "S",
         "status" : "100%",
         "tech" : ["React", "TailwindCss", "Motion"],
+        "img" : "",
         "source" : "",
         "demo" : ""
     }

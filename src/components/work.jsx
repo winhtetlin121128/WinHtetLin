@@ -15,6 +15,11 @@ export default function Work() {
                         ProjectData.map((element, index) => {
                             return (
                                 <li key={index} className='list-none pt-5 pb-5 flex flex-col items-start'>
+
+                                    <div className='w-full flex justify-center items-center'>
+                                        <div style={{ backgroundImage: `url(${element.img})`}} className='w-180 h-130 bg-cover bg-center'></div>
+                                    </div>
+
                                     <h3>{element.title}</h3>
                                     <p>{element.description}</p>
                                 </li>
