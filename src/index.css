@@ -20,6 +20,16 @@
     src: url('./assets/fonts/Syne.ttf');
 }
 
+@font-face {
+    font-family: "Silk";
+    src: url('./assets/fonts/SilkScreen.ttf');
+}
+
+@font-face {
+    font-family: "Recursive";
+    src: url('./assets/fonts/Recursive.ttf');
+}
+
 @keyframes Floating{
     0%, 100% {
         opacity: 0;

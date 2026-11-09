@@ -1,0 +1,78 @@
+[
+    {
+        "title" : "Frontend Developer",
+        "status" : "Current Role",
+        "company" : "Self-Employed",
+        "job" : "Remote",
+        "description" : "",
+        "type" : "work",
+        "start" : 2026,
+        "end" : "Present"
+    },
+
+    {
+        "title" : "Junior Accountant",
+        "status" : "Completed",
+        "company" : "We Win Express",
+        "job" : "Yangon, Myanmar",
+        "description" : "",
+        "type" : "work",
+        "start" : 2025,
+        "end" : 2026
+    },
+
+    {
+        "title" : "Service Engineer",
+        "status" : "Completed",
+        "company" : "YZNextX ( Galaxy Software )",
+        "job" : "Yangon, Myanmar",
+        "description" : "",
+        "type" : "work",
+        "start" : 2025,
+        "end" : 2025
+    },
+
+    {
+        "title" : "Full-Stack Engineering",
+        "status" : "Completed",
+        "company" : "Self-Taught",
+        "job" : "Online",
+        "description" : "",
+        "type" : "school",
+        "start" : 2026,
+        "end" : "Present"
+    },
+
+    {
+        "title" : "Frontend Development",
+        "status" : "Completed",
+        "company" : "Self-Taught",
+        "job" : "Online",
+        "description" : "",
+        "type" : "school",
+        "start" : 2025,
+        "end" : 2026
+    },
+
+    {
+        "title" : "Web Foundation",
+        "status" : "Completed",
+        "company" : "Data & Technology",
+        "job" : "Online",
+        "description" : "",
+        "type" : "school",
+        "start" : 2025,
+        "end" : 2025
+    },
+
+    {
+        "title" : "Python Foundation",
+        "status" : "Completed",
+        "company" : "Let Learn Programming",
+        "job" : "Online",
+        "description" : "",
+        "type" : "school",
+        "start" : 2024,
+        "end" : 2024
+    }
+]

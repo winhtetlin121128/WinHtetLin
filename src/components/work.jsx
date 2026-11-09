@@ -17,7 +17,7 @@ export default function Work({WorkRef}) {
             <div className='w-full lg:w-320 h-full pt-20 pb-20 p-3 border-b border-[#000]/20'>
 
                 <header className='flex justify-between items-end font-[Inter] '>
-                    <div className='flex justify-start items-center gap-2'>
+                    <div className='flex justify-start items-center gap-2 font-[Silk]'>
                         <span className='text-[11px] lg:text-[13px] font-bold'>01</span>
                         <h3 className='text-[13px] lg:text-[20px]'>Selected Projects</h3>
                     </div>
@@ -34,32 +34,6 @@ export default function Work({WorkRef}) {
                 </header>
 
                 <div className='flex flex-wrap w-full mt-20 h-[100%] gap-5 justify-center'>
-                    {/* {
-                        ProjectData.slice(0,3 ).map((element, index) => {
-                            return (
-                                <li key={index} className='w-100 h-120 flex flex-col items-center list-none rounded-xl p-3'>
-                                    <div style={{ backgroundImage : `url(${element.img})`}} className='bg-cover bg-center w-full h-70 rounded-xl border border-[#000]/20'></div>
-
-                                    <h3 className='w-full p-3 font-[Inter] text-[15px] lg:text-[17px]'>{element.title}</h3>
-
-                                    <p className='font-[Valley] text-[#000]/60 text-[13px] w-full pl-3 pr-3 line-clamp-2 h-10'>{element.description}</p>
-                                    
-                                    <div className='flex justify-start w-full pl-3 mt-5'>
-                                        <ul className='flex justify-start items-center gap-2'>
-                                            {
-                                                element.category.map(element => {
-                                                    return (
-                                                        <li key={index} className='border border-[#000]/20 pl-3 pr-3 pt-1 pb-1 text-[12px] rounded-3xl'>{element}</li>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    </div>
-                                </li>
-                            )
-                        })
-                    } */}
-
                     {
                         ProjectData.slice(0, 3).map((element, index) => {
                             return (
@@ -76,7 +50,7 @@ export default function Work({WorkRef}) {
                                         <span className='font-[Inter] text-[13px]'>Web-App</span>
                                     </header>
 
-                                    <div style={{ backgroundImage: `url(${element.img})`}} className='w-full h-[50%] bg-cover bg-center'></div>
+                                    <div style={{ backgroundImage: `url(${element.img})`}} className='w-full h-[50%] bg-cover bg-center border-b border-[#000]/20'></div>
 
                                     <div className='w-[50%] p-3 w-full'>
                                         <h3 className='text-[16px] font-[Inter]'>{element.title}</h3>
@@ -86,7 +60,7 @@ export default function Work({WorkRef}) {
                                             {
                                                 element.category.map((element, index) => {
                                                     return (
-                                                        <li key={index} className='border bg-[#f5f5f7] border-[#000]/20 pl-3 pr-3 pt-1 pb-1 text-[11px]'>{element}</li>
+                                                        <li key={index} className='border bg-[#f5f5f7]/60 border-[#000]/20 pl-3 pr-3 pt-1 pb-1 text-[11px]'>{element}</li>
                                                     )
                                                 })
                                             }

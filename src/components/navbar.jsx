@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowIcon from '../../public/arrow.png';
 import Coffee from '../coffee/coffee.jsx';
 
-export default function Navbar({ScrollToSection, HomeRef, WorkRef}) {
+export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef, AboutRef}) {
 
     const [active, setActive] = useState("Home");
 
@@ -12,6 +12,8 @@ export default function Navbar({ScrollToSection, HomeRef, WorkRef}) {
 
         element === "Work" ? ScrollToSection(WorkRef) : ""
         element === "Home" ? ScrollToSection(HomeRef) : ""
+        element === "Experience" ? ScrollToSection(ExperienceRef) : ""
+        element === "About" ? ScrollToSection(AboutRef) : ""
     }
 
     return (
