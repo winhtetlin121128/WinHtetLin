@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowIcon from '../../public/arrow.png';
 import Coffee from '../coffee/coffee.jsx';
 
-export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef, AboutRef}) {
+export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef, AboutRef, ContactRef}) {
 
     const [active, setActive] = useState("Home");
 
@@ -36,7 +36,7 @@ export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef
                 {/* Action */}
                 <div className="flex justify-end items-center h-full gap-2 w-[40%] lg:w-[10%]">
                     {/* <button className="border border-[#000]/20 h-10 w-10 rounded-xl"></button> */}
-                    <button className="pl-4 pr-4 pt-1 pb-1 rounded-3xl text-[13px] bg-[#000] text-[#fff] font-[Valley] flex justify-center items-center gap-2 hover:scale-[0.9] cursor-pointer transition duration-200">Hire Me <img src={ArrowIcon} className='w-2.5 h-2.5 rotate-30'/></button>
+                    <button onClick={() => ScrollToSection(ContactRef)} className="pl-4 pr-4 pt-1 pb-1 rounded-3xl text-[13px] bg-[#000] text-[#fff] font-[Valley] flex justify-center items-center gap-2 hover:scale-[0.9] cursor-pointer transition duration-200">Hire Me <img src={ArrowIcon} className='w-2.5 h-2.5 rotate-30'/></button>
                 </div>
             </nav>
 

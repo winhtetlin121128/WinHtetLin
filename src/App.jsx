@@ -3,6 +3,7 @@ import HomeSession from './components/home.jsx';
 import WorkSession from './components/work.jsx';
 import ExperienceSession from './components/experience.jsx';
 import AboutSession from './components/about.jsx';
+import ContactSession from './components/contact.jsx';
 import FooterSession from './components/footer.jsx';
 import InteractiveDots from './cursor.jsx';
 
@@ -22,6 +23,7 @@ export default function App() {
   const WorkRef = useRef(null);
   const ExperienceRef = useRef(null);
   const AboutRef = useRef(null);
+  const ContactRef = useRef(null);
 
   return (
     <div className='relative min-h-screen'>
@@ -35,6 +37,7 @@ export default function App() {
         WorkRef = {WorkRef}
         ExperienceRef = {ExperienceRef}
         AboutRef = {AboutRef}
+        ContactRef = {ContactRef}
         />
         <HomeSession 
         ScrollToSection = {ScrollToSection}
@@ -49,6 +52,9 @@ export default function App() {
         />
         <AboutSession 
         AboutRef = {AboutRef}
+        />
+        <ContactSession 
+        ContactRef = {ContactRef}
         />
         <FooterSession 
         ScrollToSection = {ScrollToSection}

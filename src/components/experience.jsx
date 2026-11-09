@@ -54,7 +54,7 @@ export default function Experience({ExperienceRef}) {
                             const isOpen = openCards.includes(index);
 
                             return (
-                                <li key={index} className={`border bg-[#fff] border-[#000]/20 w-full h-40 p-3 rounded-xl ${isOpen ? "h-auto" : "h-40"}`}>
+                                <li key={index} className={`border bg-[#fff] rounded-xl border-[#000]/20 w-full h-40 p-3 ${isOpen ? "h-auto" : "h-40"}`}>
                                     <div>
                                         <div>
                                             <div className="flex justify-between">
@@ -63,7 +63,7 @@ export default function Experience({ExperienceRef}) {
                                             </div>
                                             <div className="flex justify-between items-center">
                                                 <h3 className="font-[Recursive] font-bold text-[17px] mt-10">{element.title}</h3>
-                                                <button onClick={() => handleCard(index)} className="w-7 h-7 border border-[#000]/20 flex justify-center items-center rounded-md"><img src={DownArrow} className={`w-4 h-4 ${isOpen ? "rotate-180" : ""}`}/></button>
+                                                <button onClick={() => handleCard(index)} className="w-7 h-7 border border-[#000]/20 flex justify-center items-center rounded-md"><img src={DownArrow} className={`w-4 h-4 ${isOpen ? "rotate-180 duration-200 transition all" : ""}`}/></button>
                                             </div>
                                             <div className="flex justify-start gap-5 items-center">
                                                 <span className="font-[Inter] text-[13px] underline underline-offset-7 text-[#000]/60 flex gap-1 items-center">{element.company} <img src={Arrow} className="w-2 h-2 rotate-50"/></span>
