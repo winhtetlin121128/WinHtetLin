@@ -56,7 +56,7 @@ export default function Contact({ContactRef}) {
     }
 
     return (
-        <div ref={ContactRef} className="w-full h-[100%] flex justify-center items-center pt-10">
+        <div ref={ContactRef} className="w-full h-[100%] flex justify-center items-center pt-20">
             <div className="w-full lg:w-320 pb-20 p-3">
                 <header>
                     <div className='flex justify-start items-center gap-2'>
@@ -84,7 +84,7 @@ export default function Contact({ContactRef}) {
                             </div>
                         </div>
 
-                        <a href={resume} download='resume' className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#0f2a47] text-[#fff] lg:mt-32 cursor-pointer hover:scale-[0.9] transition duration-200">Downlad Resume</a>
+                        <a href={resume} download='resume' className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#0f2a47] text-[#fff] mt-10 lg:mt-32 cursor-pointer hover:scale-[0.9] transition duration-200">Downlad Resume</a>
                     </section>
                     
                     <section className="w-[100%] lg:w-[50%] h-[100%] flex justify-center lg:justify-end items-center">
