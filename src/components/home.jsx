@@ -1,7 +1,7 @@
 import Arrow from '../../public/arrow.png';
 import Github from '../../public/github.png';
 import Linkedin from '../../public/linkedin.png';
-import resume from '../assets/winHtetLin.pdf';
+import resume from '../../public/WinHtetLin.pdf';
 
 export default function Home({ScrollToSection, HomeRef, WorkRef}) {
 

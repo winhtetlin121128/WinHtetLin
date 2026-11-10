@@ -2,7 +2,7 @@ const Platform = ["Linkedin", "GitHub", "Whats App"];
 import { React, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
-import resume from '../assets/WinHtetLin.pdf';
+import resume from '../../public/WinHtetLin.pdf';
 
 export default function Contact({ContactRef}) {
 
