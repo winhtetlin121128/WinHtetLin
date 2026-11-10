@@ -2,12 +2,32 @@ const Platform = ["Linkedin", "GitHub", "Whats App"];
 import { React, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
+import resume from '../assets/WinHtetLin.pdf';
 
 export default function Contact({ContactRef}) {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const handleToClipBoard = (e) => {
+        const InputValue = e.target.innerText;
+        navigator.clipboard.writeText(InputValue)
+
+        e.target.innerText = "copied";
+
+
+    }
+
+    const LinkedinProfile = import.meta.env.VITE_LINKEDIN_URL;
+    const WhatsAppProfile = import.meta.env.VITE_WHATSAPleaP_URL;
+    const GitHubProfile = import.meta.env.VITE_GITHUB_URL;
+
+    const handleProfile = (element) => {
+        element === "Linkedin" ? window.open(LinkedinProfile) : ""
+        element === "GitHub" ? window.open(GitHubProfile) : ""
+        element === "Whats App" ? window.open(WhatsAppProfile) : ""
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -54,14 +74,17 @@ export default function Contact({ContactRef}) {
                             {
                                 Platform.map((element, index) => {
                                     return (
-                                        <span key={index} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-1 items-center hover:text-[#000] cursor-pointer transition duration-200">{element} <img src={Arrow} className='w-2 h-2 rotate-30'/></span>
+                                        <span onClick={() =>  handleProfile(element)} key={index} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-1 items-center hover:text-[#000] cursor-pointer transition duration-200">{element} <img src={Arrow} className='w-2 h-2 rotate-30'/></span>
                                     )
                                 })
                             }
-                            <span className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">+959757726914</span>
-                            <span className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">winhtetlin162026@gmail.com</span>
-                            <span className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#0f2a47] text-[#fff] lg:mt-32 cursor-pointer hover:scale-[0.9] transition duration-200">Downlad Resume</span>
+                            <div className='flex gap-2'>
+                                <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">+959757726914</span>
+                                <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">winhtetlin162026@gmail.com</span>
+                            </div>
                         </div>
+
+                        <a href={resume} download='resume' className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#0f2a47] text-[#fff] lg:mt-32 cursor-pointer hover:scale-[0.9] transition duration-200">Downlad Resume</a>
                     </section>
                     
                     <section className="w-[100%] lg:w-[50%] h-[100%] flex justify-center lg:justify-end items-center">

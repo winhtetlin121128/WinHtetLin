@@ -4,7 +4,7 @@
         "status" : "Current Role",
         "company" : "Self-Employed",
         "job" : "Remote",
-        "description" : "",
+        "description" : "Started my journey as a freelance developer. I'm building landing-site, management system ( POS, CMS, ERP ) and some type of websites with profit or software rent service. For Free Community I just giving sponsor to them. I'm working with some clients.",
         "type" : "work",
         "start" : 2026,
         "end" : "Present"
@@ -15,7 +15,7 @@
         "status" : "Completed",
         "company" : "We Win Express",
         "job" : "Yangon, Myanmar",
-        "description" : "",
+        "description" : "I worked in accounting field for a short time. Not in tech field but I also learned the process of account such as Opening, Damage, Expense, Income, Cash Flow, Banking, Debit, Credit, Sales, Stocks and Report by Monthly & Yearly,",
         "type" : "work",
         "start" : 2025,
         "end" : 2026
@@ -26,9 +26,20 @@
         "status" : "Completed",
         "company" : "YZNextX ( Galaxy Software )",
         "job" : "Yangon, Myanmar",
-        "description" : "",
+        "description" : "My position was ' Sevice Engineer'. I'm mainly worked on suppoting teammates by tools, driver, design and debugging error. I touched Cafe POS, iStock and Galaxy Software. Sometimes I went to client sides to discuss about features, flow they want and training.",
         "type" : "work",
         "start" : 2025,
+        "end" : 2025
+    },
+
+    {
+        "title" : "Data Entry",
+        "status" : "Completed",
+        "company" : "Su Pyae Phyo Lwin Express",
+        "job" : "Remote",
+        "description" : "First time working experience and just learning new thing when I attending some course on campus and online.",
+        "type" : "work",
+        "start" : 2024,
         "end" : 2025
     },
 
@@ -37,7 +48,18 @@
         "status" : "Current Learning",
         "company" : "Self-Taught",
         "job" : "Online",
-        "description" : "",
+        "description" : "Currently, I'm still learning new tech with JavaScript such as Next.js, Node.js, Express.js, Prisma, Postgresql, MongoDB and others tools & tech like Git, GitHub, Motion, Postman, Vercel, Railway, library and packages.",
+        "type" : "school",
+        "start" : 2026,
+        "end" : "Present"
+    },
+
+    {
+        "title" : "General Education Development ( GED )",
+        "status" : "Current Learning",
+        "company" : "Strategy First College ( GPIS )",
+        "job" : "Online",
+        "description" : "I'm preparing for high school to be finished and will be join to Computer Science at KMD or Strategy First College. If I have a change and time to attend IGCSE A Level, I will join the University called 'University Information Technology ( UIT ), If not I will choose College.'",
         "type" : "school",
         "start" : 2026,
         "end" : "Present"
@@ -48,7 +70,7 @@
         "status" : "Completed",
         "company" : "Self-Taught",
         "job" : "Online",
-        "description" : "",
+        "description" : "Jumped into real web developing with React.js, TailwindCss, Figma, PHP and SQL. I tried to created the freelance projects like landing page with modern designs without profit. I just want to get experience!",
         "type" : "school",
         "start" : 2025,
         "end" : 2026
@@ -59,7 +81,7 @@
         "status" : "Completed",
         "company" : "Data & Technology",
         "job" : "Online",
-        "description" : "",
+        "description" : "I learned the web languages like HTML5, CSS3, JavaScript and became milestone. I created practice projects and participate in some of my friend and teacher projects.",
         "type" : "school",
         "start" : 2025,
         "end" : 2025
@@ -70,7 +92,7 @@
         "status" : "Completed",
         "company" : "Let Learn Programming",
         "job" : "Online",
-        "description" : "",
+        "description" : "I leaned the OOP lanaguage for the first time, I created and sumbited school projects only. and I stopped.",
         "type" : "school",
         "start" : 2024,
         "end" : 2024
