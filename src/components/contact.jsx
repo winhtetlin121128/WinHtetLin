@@ -50,12 +50,13 @@ export default function Contact({ContactRef}) {
                 setName('');
                 setEmail('');
                 setMessage('');
+
+                toast.success("I'll reply in a few hours.")
             })
             .catch((error) => {
                 console.error("Error sending email", error)
+                toast.error("Something Went Wrong!")
             })
-
-        toast.success("Successfully Sumbited!, I'll reply in hours.")
     }
 
     return (

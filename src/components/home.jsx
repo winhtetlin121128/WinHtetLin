@@ -3,6 +3,8 @@ import Github from '../../public/github.png';
 import Linkedin from '../../public/linkedin.png';
 import resume from '../../public/WinHtetLin.pdf';
 
+import { motion } from 'motion/react';
+
 export default function Home({ScrollToSection, HomeRef, WorkRef}) {
 
     const GitHubProfile = import.meta.env.VITE_GITHUB_URL;
@@ -10,7 +12,10 @@ export default function Home({ScrollToSection, HomeRef, WorkRef}) {
 
     return (
         <div ref={HomeRef} className="w-full h-[100vh] lg:h-[100%] flex justify-center items-start">
-            <div className="w-full h-full lg:h-[100%] lg:w-320 pt-30 p-3 flex flex-col justify-center items-center lg:items-start border-b border-[#000]/20 pb-20">
+            <motion.div 
+            initial={{ opacity: 0, x: -100 }}
+            animate = {{ opacity: 1, x: 0}}
+            className="w-full h-full lg:h-[100%] lg:w-320 pt-30 p-3 flex flex-col justify-center items-center lg:items-start border-b border-[#000]/20 pb-20">
                 <span className="flex w-fit text-[13px] justify-center gap-2 items-center h-7 border border-[#000]/20 pl-4 pr-4 pt-1 pb-1 font-[Valley] text-[#000]/60 rounded-3xl"><div className="w-2 h-2 rounded-3xl bg-green-600 green-ball-dot"></div>Open to full-stack roles</span>
 
 
@@ -26,7 +31,7 @@ export default function Home({ScrollToSection, HomeRef, WorkRef}) {
                     <button onClick={() => window.open(GitHubProfile)} style={{backgroundImage: `url(${Github})`}} className='w-5 h-5 bg-cover bg-center cursor-pointer'></button>
                     <button onClick={() => window.open(LinkedinProfile)} style={{backgroundImage: `url(${Linkedin})`}} className='w-5 h-5 bg-cover bg-center cursor-pointer'></button>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

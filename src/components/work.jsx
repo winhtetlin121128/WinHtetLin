@@ -4,6 +4,19 @@ import { useState } from 'react';
 
 const Tags = ["All", "Web", "Mobile"]
 
+//animate 
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+}
+
+const items = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
+
+import { motion } from 'motion/react';
+
 export default function Work({WorkRef}) {
 
     const [tagActive, setTagActive] = useState("All");
@@ -33,11 +46,18 @@ export default function Work({WorkRef}) {
                     </div>
                 </header>
 
-                <div className='flex flex-wrap w-full mt-20 h-[100%] gap-5 justify-center'>
+                <motion.div 
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+                className='flex flex-wrap w-full mt-20 h-[100%] gap-5 justify-center'>
                     {
                         ProjectData.slice(0, 3).map((element, index) => {
                             return (
-                                <li key={index} className='list-none border border-[#000]/20 w-100 h-110 -xl bg-[#fff] hover:scale-[1.05] transition duration-200'>
+                                <motion.li 
+                                variants={items}
+                                key={index} className='list-none border border-[#000]/20 w-100 h-110 -xl bg-[#fff] hover:scale-[1.05] transition duration-200'>
                                     <header className='h-13 border-b border-[#000]/20 flex justify-between items-center pl-3 pr-3'>
                                         <div className='flex justify-center items-center h-full gap-3'>
                                             <div className='w-2 h-2 rounded-3xl bg-red-400'></div>
@@ -66,11 +86,11 @@ export default function Work({WorkRef}) {
                                             }
                                         </ul>
                                     </div>
-                                </li>
+                                </motion.li>
                             )
                         })
                     }
-                </div>
+                </motion.div>
 
                 <div className='w-full flex mt-10 items-center justify-center'>
                     <button className='floating-button font-[Valley] text-[12px] flex items-center justify-center gap-3 pl-3 pr-3 pt-1 pb-1 border border-[#000]/20 cursor-pointer transition duration-200'>All Project <img src={Arrow} className='w-2 rotate-90'/></button>

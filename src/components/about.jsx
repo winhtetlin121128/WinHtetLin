@@ -3,6 +3,19 @@ import Typewriter from 'typewriter-effect';
 import MiProfile from '../../public/Mi.png';
 import Icons from '../hook/icon.js';
 
+import { motion } from 'motion/react';
+
+//animate 
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+}
+
+const items = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
+
 
 const Record = [
     {
@@ -21,6 +34,11 @@ const Record = [
     }
 ];
 
+const Pargraph = ["I focus on how can be easy to use and how much useful for realworld problem. I enjoy turning ideas into real products and crafting experience that feel smooth and intutive.", 
+    "In other side, I also learning new thing little by little, day to day, step by step from online, self-taught and sloving problem in daily life.",
+    "I mainly build landing-site, E-commerce and Management System with MERN and PERN Stack.",
+    "My goal is to become a passionate Full-stack developer."]
+
 const Languages = ["Python", "JavaScript", "TypeScript"]
 const FontendCore = ["React", "TypeScript", "TailwindCss", "Python", "HTML5", "CSS3", "JavaScript", "Node", "Express", "Postgresql", "Mongo", "Motion", "Prisma"];
 const Tools = ["VsCode", "Figma", "Git", "GitHub", "Postman", "Codex", "Cursor", "OpenCode"]
@@ -32,7 +50,11 @@ export default function AboutPage({AboutRef}) {
     return (
         <div ref={AboutRef} className="w-full h-[100%] flex justify-center items-center pt-20">
             <div className="w-full lg:w-320 pb-20 border-b border-[#000]/20">
-                <header className="w-full h-20 pl-3 pr-3">
+                <motion.header 
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                className="w-full h-20 pl-3 pr-3">
                     <div className='flex justify-start items-center gap-2'>
                         <span className='text-[11px] lg:text-[13px] font-bold font-[Silk]'>03</span>
                         <h3 className='text-[13px] lg:text-[20px] font-[Silk]'>About Me</h3>
@@ -49,7 +71,7 @@ export default function AboutPage({AboutRef}) {
                             }}
                             />
                         </h3>
-                </header>
+                </motion.header>
 
                 <div className="w-full flex flex-wrap items-start justify-center pl-3 pr-3">
                     <section className="w-[100%] lg:w-[40%] h-full">
@@ -59,8 +81,16 @@ export default function AboutPage({AboutRef}) {
                     </section>
 
                     <section className="w-[100%] lg:w-[60%] h-full pt-20">
-                        <h3 className='font-bold font-[Inter] text-[25px] w-full flex justify-center lg:justify-start'>Win Htet Lin</h3>
-                        <ul className='flex gap-5 mt-3 justify-center lg:justify-start'>
+                        <motion.h3 
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.15 }}
+                        className='font-bold font-[Inter] text-[25px] w-full flex justify-center lg:justify-start'>Win Htet Lin</motion.h3>
+                        <motion.ul 
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.15 }}
+                        className='flex gap-5 mt-3 justify-center lg:justify-start'>
                             {
                                 Record.map((element, index) => {
                                     return (
@@ -71,65 +101,92 @@ export default function AboutPage({AboutRef}) {
                                     )
                                 })
                             }
-                        </ul>
+                        </motion.ul>
 
-                        <div className='text-[16px] font-[Inter] text-[#000]/70 mt-10 flex flex-col gap-5 text-center lg:text-start'>
-                            <p>I focus on how can be easy to use and how much useful for realworld problem. I enjoy turning ideas into real products and crafting experience that feel smooth and intutive.</p>
-                            <p>In other side, I also learning new thing little by little, day to day, step by step from online, self-taught and sloving problem in daily life.</p>
-                            <p>I mainly build landing-site, E-commerce and Management System with MERN and PERN Stack.</p>
-                            <p>My goal is to become a passionate Full-stack developer.</p>
-                        </div>
+                        <motion.div 
+                        variants={container}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.15 }}
+                        className='text-[16px] font-[Inter] text-[#000]/70 mt-10 flex flex-col gap-5 text-center lg:text-start'>
+                            {
+                                Pargraph.map((element, index) => {
+                                    return (
+                                        <motion.p 
+                                        variants={items}
+                                        key={index}>{element}</motion.p>
+                                    )
+                                })
+                            }
+                        </motion.div>
                     </section>
                 </div>
 
                 <div className='w-full flex flex-col items-start pl-3 pr-3 mt-20'>
-                    <div className='mt-10 flex flex-col lg:flex-row items-start'>
+                    <motion.div 
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.15 }}
+                    className='mt-10 flex flex-col lg:flex-row items-start'>
                         <h3 className='text-[15px] font-[Valley] pt-1 pb-1 w-50'>Languages</h3>
                         <ul className='mt-3 flex flex-wrap gap-2'>
                             {
                                 Languages.map((element, index) => {
                                     return (
-                                        <li key={index} className='flex justify-center items-center gap-1 bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                               
+                                        <motion.li variants={items} key={index} className='flex justify-center items-center gap-1 bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                               
                                             <img src={Icons[element]} className='w-4 h-4'/>
                                             <span>{element}</span>
-                                        </li>
+                                        </motion.li>
                                     )
                                 })
                             }
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className='mt-10 flex flex-col lg:flex-row items-start gap-5'>
+                    <motion.div 
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.15 }}
+                    className='mt-10 flex flex-col lg:flex-row items-start gap-5'>
                         <h3 className='text-[15px] font-[Valley] w-50 pt-1 pb-1'>Tech Stack I Use</h3>
                         <ul className='mt-3 flex flex-wrap gap-2 lg:ml-8'>
                             {
                                 FontendCore.map((element, index) => {
                                     return (
-                                        <li key={index} className='bg-[#fff] flex items-center justify-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
+                                        <motion.li 
+                                        variants={items}
+                                        key={index} className='bg-[#fff] flex items-center justify-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
                                             <img src={Icons[element]} className='w-4 h-4'/>
                                             <span>{element}</span>
-                                        </li>
+                                        </motion.li>
                                     )
                                 })
                             }
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className='mt-10 flex flex-col lg:flex-row'>
+                    <motion.div 
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.15 }}
+                    className='mt-10 flex flex-col lg:flex-row'>
                         <h3 className='text-[15px] font-[Valley] w-50 pt-1 pb-1 '>Tools and AI</h3>
                         <ul className='mt-3 flex flex-wrap gap-2'>
                             {
                                 Tools.map((element, index) => {
                                     return (
-                                        <li key={index} className='bg-[#fff] flex justify-center items-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
+                                        <motion.li variants={items} key={index} className='bg-[#fff] flex justify-center items-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
                                            <img src={Icons[element]} className='w-4 h-4'/>
                                            <span>{element}</span>
-                                        </li>
+                                        </motion.li>
                                     )
                                 })
                             }
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

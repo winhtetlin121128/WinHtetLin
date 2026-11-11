@@ -4,6 +4,8 @@ import Arrow from '../../public/blackarrow.png';
 import LocationIcon from '../../public/location.png';
 import DownArrow from '../../public/down-arrow.png';
 
+import { motion } from 'motion/react';
+
 export default function Experience({ExperienceRef}) {
 
     const [active, setActive] = useState("Learning");
@@ -54,7 +56,11 @@ export default function Experience({ExperienceRef}) {
                             const isOpen = openCards.includes(index);
 
                             return (
-                                <li key={index} className={`border bg-[#fff] rounded-xl border-[#000]/20 w-full h-40 p-3 ${isOpen ? "h-auto" : "h-40"}`}>
+                                <motion.li 
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.15 }}
+                                key={index} className={`border bg-[#fff] rounded-xl border-[#000]/20 w-full h-40 p-3 ${isOpen ? "h-auto" : "h-40"}`}>
                                     <div>
                                         <div>
                                             <div className="flex justify-between">
@@ -106,7 +112,7 @@ export default function Experience({ExperienceRef}) {
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </motion.li>
                             )
                         })
                     }
