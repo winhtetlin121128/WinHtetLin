@@ -7,6 +7,8 @@ import ContactSession from './components/contact.jsx';
 import FooterSession from './components/footer.jsx';
 import InteractiveDots from './cursor.jsx';
 
+import toast,{ Toaster } from 'react-hot-toast';
+
 import Coffee from './coffee/coffee.jsx';
 import { useRef } from 'react';
 
@@ -60,6 +62,8 @@ export default function App() {
         ScrollToSection = {ScrollToSection}
         HomeRef = {HomeRef}
         />
+
+        <Toaster />
       </div>
     </div>
   )

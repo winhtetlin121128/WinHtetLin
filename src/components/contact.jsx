@@ -3,6 +3,7 @@ import { React, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
 import resume from '../../public/WinHtetLin.pdf';
+import toast from 'react-hot-toast';
 
 export default function Contact({ContactRef}) {
 
@@ -53,6 +54,8 @@ export default function Contact({ContactRef}) {
             .catch((error) => {
                 console.error("Error sending email", error)
             })
+
+        toast.success("Successfully Sumbited!, I'll reply in hours.")
     }
 
     return (
