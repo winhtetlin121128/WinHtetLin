@@ -1,6 +1,8 @@
 
 import Typewriter from 'typewriter-effect';
 import MiProfile from '../../public/Mi.png';
+import Icons from '../hook/icon.js';
+
 
 const Record = [
     {
@@ -21,7 +23,9 @@ const Record = [
 
 const Languages = ["Python", "JavaScript", "TypeScript"]
 const FontendCore = ["React", "TypeScript", "TailwindCss", "Python", "HTML5", "CSS3", "JavaScript", "Node", "Express", "Postgresql", "Mongo", "Motion", "Prisma"];
-const Tools = ["VS Code", "Figma", "Git", "GitHub", "Postman", "Codex", "Cursor", "OpenCode"]
+const Tools = ["VsCode", "Figma", "Git", "GitHub", "Postman", "Codex", "Cursor", "OpenCode"]
+
+const { React, TypeScript, TailwindCss, Python, HTML5, CSS3, JavaScript, Node, Express, Postgresql, Mongo, Motion, Prisma, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode } =  Icons;
 
 
 export default function AboutPage({AboutRef}) {
@@ -85,7 +89,9 @@ export default function AboutPage({AboutRef}) {
                             {
                                 Languages.map((element, index) => {
                                     return (
-                                        <li key={index} className='bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                                                <span>{element}</span>
+                                        <li key={index} className='flex justify-center items-center gap-1 bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                               
+                                            <img src={Icons[element]} className='w-4 h-4'/>
+                                            <span>{element}</span>
                                         </li>
                                     )
                                 })
@@ -95,11 +101,13 @@ export default function AboutPage({AboutRef}) {
 
                     <div className='mt-10 flex flex-col lg:flex-row items-start gap-5'>
                         <h3 className='text-[15px] font-[Valley] w-50 pt-1 pb-1'>Tech Stack I Use</h3>
-                        <ul className='mt-3 flex flex-wrap gap-2'>
+                        <ul className='mt-3 flex flex-wrap gap-2 lg:ml-8'>
                             {
                                 FontendCore.map((element, index) => {
                                     return (
-                                        <li key={index} className='bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                                                <span>{element}</span>
+                                        <li key={index} className='bg-[#fff] flex items-center justify-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
+                                            <img src={Icons[element]} className='w-4 h-4'/>
+                                            <span>{element}</span>
                                         </li>
                                     )
                                 })
@@ -113,7 +121,9 @@ export default function AboutPage({AboutRef}) {
                             {
                                 Tools.map((element, index) => {
                                     return (
-                                        <li key={index} className='bg-[#fff] pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>                                                <span>{element}</span>
+                                        <li key={index} className='bg-[#fff] flex justify-center items-center gap-1 pl-4 pr-4 pt-1 pb-1 text-[13px] font-[Inter] border border-[#000]/20 rounded-3xl cursor-default'>     
+                                           <img src={Icons[element]} className='w-4 h-4'/>
+                                           <span>{element}</span>
                                         </li>
                                     )
                                 })
