@@ -3,7 +3,7 @@
 import { default as React } from '../assets/icon/React.png';
 import { default as TypeScript } from '../assets/icon/typescript.png';
 import { default as TailwindCss } from '../assets/icon/tailwindcss.png';
-import { default as NextJS } from '../assets/icon/next.js.png';
+import { default as NextJS } from '../assets/icon/Next.js.png';
 import { default as Python } from '../assets/icon/python.png';
 import { default as HTML5 } from '../assets/icon/HTML5.png';
 import { default as CSS3 } from '../assets/icon/CSS3.png';
