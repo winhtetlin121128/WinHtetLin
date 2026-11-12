@@ -5,14 +5,26 @@ import ExperienceSession from './components/experience.jsx';
 import AboutSession from './components/about.jsx';
 import ContactSession from './components/contact.jsx';
 import FooterSession from './components/footer.jsx';
+import DownloadModal from './components/modal.jsx';
 import InteractiveDots from './cursor.jsx';
 
 import toast,{ Toaster } from 'react-hot-toast';
 
 import Coffee from './coffee/coffee.jsx';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 export default function App() {
+
+  const [isPreloaderActive, setIsPreloaderActive] = useState(true);
+
+  // Disable body scrolling while intro animation runs
+  useEffect(() => {
+    if (isPreloaderActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isPreloaderActive]);
 
   const ScrollToSection = (ref) => {
     ref.current?.scrollIntoView({
@@ -29,8 +41,11 @@ export default function App() {
 
   return (
     <div className='relative min-h-screen'>
-
+      {isPreloaderActive && (
+        <DownloadModal onComplete={() => setIsPreloaderActive(false)} />
+      )}
       <InteractiveDots />
+
 
       <div className='relative z-10'>
         <Navbar 
@@ -65,6 +80,7 @@ export default function App() {
 
         <Toaster />
       </div>
+
     </div>
   )
 }

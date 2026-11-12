@@ -4,6 +4,18 @@ import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
 import resume from '../../public/WinHtetLin.pdf';
 import toast from 'react-hot-toast';
+import { motion } from 'motion/react';
+
+//animate 
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+}
+
+const items = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
 
 export default function Contact({ContactRef}) {
 
@@ -46,7 +58,7 @@ export default function Contact({ContactRef}) {
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
-                console.log('Email sent successfully!', response);
+                // console.log('Email sent successfully!', response);
                 setName('');
                 setEmail('');
                 setMessage('');
@@ -74,25 +86,38 @@ export default function Contact({ContactRef}) {
                         <h3 className="text-[30px] font-[Recursive] font-bold">Let's Work Together</h3>
                         <span className="text-[15px] font-[Inter] text-[#000]/60 text-center lg:text-start">The quickest way to reach me is email. I usually reply within a couple of days.</span>
 
-                        <div className="flex flex-wrap w-[100%] lg:w-[60%] gap-2 text-[#000]/60 items-center justify-center lg:justify-start mt-10">
+                        <motion.div 
+                        variants={container}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.15 }}
+                        transition={{ delay: 0.5 }}
+                        className="flex flex-wrap w-[100%] lg:w-[60%] gap-2 text-[#000]/60 items-center justify-center lg:justify-start mt-10">
                             {
                                 Platform.map((element, index) => {
                                     return (
-                                        <span onClick={() =>  handleProfile(element)} key={index} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-1 items-center hover:text-[#000] cursor-pointer transition duration-200">{element} <img src={Arrow} className='w-2 h-2 rotate-30'/></span>
+                                        <motion.span variants={items} onClick={() =>  handleProfile(element)} key={index} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-1 items-center hover:text-[#000] cursor-pointer transition duration-200">{element} <img src={Arrow} className='w-2 h-2 rotate-30'/></motion.span>
                                     )
                                 })
                             }
-                            <div className='flex gap-2'>
+                            <motion.div 
+                            variants={items}
+                            className='flex gap-2'>
                                 <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">+959757726914</span>
                                 <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">winhtetlin162026@gmail.com</span>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
 
                         <a href={resume} download='resume' className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#0f2a47] text-[#fff] mt-10 lg:mt-32 cursor-pointer hover:scale-[0.9] transition duration-200">Downlad Resume</a>
                     </section>
                     
                     <section className="w-[100%] lg:w-[50%] h-[100%] flex justify-center lg:justify-end items-center">
-                        <form onSubmit={handleSubmit} className='w-120 h-120 border flex flex-col border-[#000]/20 bg-[#fff] shadow-lg font-[Inter] pl-5 pr-5 pt-7 pb-7 rounded-xl'>
+                        <motion.form 
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.15 }}
+                        transition={{ delay: 0.7 }}
+                        onSubmit={handleSubmit} className='w-120 h-120 border flex flex-col border-[#000]/20 bg-[#fff] shadow-lg font-[Inter] pl-5 pr-5 pt-7 pb-7 rounded-xl'>
                             <label className='text-[13px]'>Name</label>
                             <input 
                             value={name}
@@ -112,7 +137,7 @@ export default function Contact({ContactRef}) {
                             type="text" placeholder='Describe about you want . . .' className='text-[13px] border border-[#000]/20 h-30 pl-3 pt-3 pr-3 mt-2 rounded-md resize-none'/>
 
                             <button className='text-[13px] bg-[#0f2a47] text-[#fff] h-10 rounded-md mt-5 active:scale-[0.9] transition duration-200 cursor-pointer'>Sumbit</button>
-                        </form>
+                        </motion.form>
                     </section>
                 </div>
             </div>

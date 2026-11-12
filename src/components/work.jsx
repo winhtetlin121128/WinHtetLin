@@ -51,6 +51,7 @@ export default function Work({WorkRef}) {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
+                transition={{ delay: 0.7}}
                 className='flex flex-wrap w-full mt-20 h-[100%] gap-5 justify-center'>
                     {
                         ProjectData.slice(0, 3).map((element, index) => {
