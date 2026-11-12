@@ -9,6 +9,7 @@ const WORDS = [
   { text: "Olá", lang: "Portuguese" },
   { text: "Namaste", lang: "Hindi" },
   { text: "Konnichiwa", lang: "Japanese" },
+  { text : "မင်္ဂလာပါ", lang: "Burmese" },
   { text: "Welcome", lang: "Portfolio" }
 ];
 
