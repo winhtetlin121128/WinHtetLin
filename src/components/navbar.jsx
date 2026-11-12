@@ -34,7 +34,7 @@ export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef
             <motion.nav 
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0, }}
-            transition={{ delay: 3}}
+            transition={{ delay: 3.7}}
             className="flex pl-4 pr-4 justify-between lg:justify-center w-full lg:w-320 h-full items-center shadow-lg border-[#000]/20 border lg:rounded-xl backdrop-blur-md">
                 {/* Logo Container */}
                 <span className="font-[Inder] flex justify-start font-bold text-[15px] w-[10%]">{"<" + "whl" + "/>"}</span>
