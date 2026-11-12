@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const WORDS = [
   { text: "Hello", lang: "English" },
-  { text: "Bonjour", lang: "French" },
+  { text: "Xin chào", lang: "Vietnam" },
   { text: "Hola", lang: "Spanish" },
   { text: "Ciao", lang: "Italian" },
   { text: "မင်္ဂလာပါ", lang: "Burmese" },
-  { text: "Namaste", lang: "Hindi" },
-  { text: "Konnichiwa", lang: "Japanese" },
+  { text: "नमस्ते", lang: "Hindi" },
+  { text: "こんにちは", lang: "Japanese" },
   { text: "Welcome", lang: "Portfolio" }
 ];
 
