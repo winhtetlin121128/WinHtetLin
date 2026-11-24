@@ -36,7 +36,7 @@ export default function Home({ScrollToSection, HomeRef, WorkRef}) {
                     </div>
                 </motion.div>
 
-                <motion.div className='w-[50%] flex justify-center hidden'>
+                <motion.div className='w-[50%] lg:flex justify-center hidden'>
                     <IdCard />
                 </motion.div>
             </div>
