@@ -25,7 +25,7 @@ const Record = [
 
     {
         "title" : "CERTIFICATES",
-        "count" : "1"
+        "count" : "3"
     },
 
     {

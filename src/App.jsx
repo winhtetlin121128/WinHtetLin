@@ -3,6 +3,7 @@ import HomeSession from './components/home.jsx';
 import WorkSession from './components/work.jsx';
 import ExperienceSession from './components/experience.jsx';
 import AboutSession from './components/about.jsx';
+import ActivitiesSession from './components/activities.jsx';
 import ContactSession from './components/contact.jsx';
 import FooterSession from './components/footer.jsx';
 import DownloadModal from './components/modal.jsx';
@@ -37,6 +38,7 @@ export default function App() {
   const WorkRef = useRef(null);
   const ExperienceRef = useRef(null);
   const AboutRef = useRef(null);
+  const ActivitiesRef = useRef(null);
   const ContactRef = useRef(null);
 
   return (
@@ -54,6 +56,7 @@ export default function App() {
         WorkRef = {WorkRef}
         ExperienceRef = {ExperienceRef}
         AboutRef = {AboutRef}
+        ActivitiesRef = {ActivitiesRef}
         ContactRef = {ContactRef}
         />
         <HomeSession 
@@ -69,6 +72,9 @@ export default function App() {
         />
         <AboutSession 
         AboutRef = {AboutRef}
+        />
+        <ActivitiesSession 
+        ActivitiesRef = {ActivitiesRef}
         />
         <ContactSession 
         ContactRef = {ContactRef}

@@ -5,10 +5,11 @@ import LocationIcon from '../../public/location.png';
 import DownArrow from '../../public/down-arrow.png';
 
 import { motion } from 'motion/react';
+import toast from "react-hot-toast";
 
 export default function Experience({ExperienceRef}) {
 
-    const [active, setActive] = useState("Learning");
+    const [active, setActive] = useState("Experience");
     const [open, setOpen] = useState(false);
     const [openCards, setOpenCards] = useState([]);
 
@@ -33,6 +34,16 @@ export default function Experience({ExperienceRef}) {
                 : [...prev, index]
         );
     };
+
+    const handleCompanyLink = (e) => {
+        const company = e.target.innerText;
+        const TechWolves = import.meta.env.VITE_TECHWOLVES;
+        const GradientRenting = import.meta.env.VITE_GRADIENT;
+        const YangonAirportGroup = import.meta.env.VITE_YAGMM;
+        const GalaxySoftware = import.meta.env.VITE_GALAXYSOFTWARE;
+        
+        company === "Gradient Renting" ? window.open(GradientRenting) : company === "Yangon Airport Group" ? window.open(YangonAirportGroup) : company === "Tech Wolves" ? window.open(TechWolves) : company === "YZNextX ( Galaxy Software )" ? window.open(GalaxySoftware) : toast.error("Unavaiable")
+    }
     
 
     return (
@@ -60,7 +71,7 @@ export default function Experience({ExperienceRef}) {
                                 initial={{ opacity: 0, y: 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.15 }}
-                                key={index} className={`border bg-[#fff] rounded-xl border-[#000]/20 w-full h-40 p-3 ${isOpen ? "h-auto" : "h-40"}`}>
+                                key={index} className={`border bg-[#fff] rounded-xl border-[#000]/20 w-full h-40  p-3 ${isOpen ? "h-auto" : "h-40"}`}>
                                     <div>
                                         <div>
                                             <div className="flex justify-between">
@@ -72,7 +83,7 @@ export default function Experience({ExperienceRef}) {
                                                 <button onClick={() => handleCard(index)} className="w-7 h-7 border border-[#000]/20 flex justify-center items-center rounded-md"><img src={DownArrow} className={`w-4 h-4 ${isOpen ? "rotate-180 duration-200 transition all" : ""}`}/></button>
                                             </div>
                                             <div className="flex justify-start gap-5 items-center">
-                                                <span className="font-[Inter] text-[13px] underline underline-offset-7 text-[#000]/60 flex gap-1 items-center">{element.company} <img src={Arrow} className="w-2 h-2 rotate-50"/></span>
+                                                <span onClick={(e) => handleCompanyLink(e)} className="font-[Inter] text-[13px] underline underline-offset-7 text-[#000]/60 flex gap-1 items-center cursor-pointer">{element.company} <img src={Arrow} className="w-2 h-2 rotate-50"/></span>
                                                 <span className="w-1 h-1 bg-gray-600 rounded-3xl green-ball-dot"></span>
                                                 <span className="font-[Inter] text-[13px] text-[#000]/60 flex gap-1 items-center"><img src={LocationIcon} className="w-3 h-3"/>{element.job}</span>
                                             </div>

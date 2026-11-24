@@ -2,7 +2,7 @@ const Platform = ["Linkedin", "GitHub", "Whats App"];
 import { React, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
-import resume from '../../public/WinHtetLin.pdf';
+import resume from '../../public/Win_Htet_Lin.pdf';
 import toast from 'react-hot-toast';
 import { motion } from 'motion/react';
 
@@ -76,7 +76,7 @@ export default function Contact({ContactRef}) {
             <div className="w-full lg:w-320 pb-20 p-3">
                 <header>
                     <div className='flex justify-start items-center gap-2'>
-                        <span className='text-[11px] lg:text-[13px] font-bold font-[Silk]'>04</span>
+                        <span className='text-[11px] lg:text-[13px] font-bold font-[Silk]'>05</span>
                         <h3 className='text-[13px] lg:text-[20px] font-[Silk]'>Contact</h3>
                     </div>
                 </header>

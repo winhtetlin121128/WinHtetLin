@@ -7,6 +7,7 @@
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript", "Prisma", "Postgresql", "Uploadthing"],
         "img" : "/project/Gradient.png",
         "source" : "",
+        "public" : false,
         "demo" : "",
         "category" : ["Real Project", "Development", "System"]
     },
@@ -18,7 +19,8 @@
         "status" : "100%",
         "tech" : ["React", "TailwindCss"],
         "img" : "/project/UIPlayground.png",
-        "source" : "",
+        "source" : "import.meta.env.VITE_UIPLAYGROUND",
+        "public" : true,
         "demo" : "",
         "category" : ["Case Study", "Development", "Web-App"]
     },
@@ -31,6 +33,7 @@
         "tech" : ["Next.js", "TailwindCss", "Motion", "TypeScript"],
         "img" : "/project/CoffeeClub.png",
         "source" : "",
+        "public" : false,
         "demo" : "",
         "category" : ["Real Project", "Development", "Landing"]
     },
@@ -43,7 +46,8 @@
         "tech" : ["React", "TailwindCss", "Motion"],
         "img" : "",
         "source" : "",
+        "public" : true,
         "demo" : "",
-        "category" : []
+        "category" : ["Real Project", "Development", "Landing"]
     }
 ]

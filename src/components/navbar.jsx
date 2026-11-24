@@ -1,4 +1,4 @@
-const MenuTag = ["Home", "Work", "Experience", "About"];
+const MenuTag = ["Home", "Work", "Experience", "About", "Activities"];
 import { useState } from 'react';
 import ArrowIcon from '../../public/arrow.png';
 import Coffee from '../coffee/coffee.jsx';
@@ -16,7 +16,7 @@ const items = {
   visible: { opacity: 1, y: 0 }
 }
 
-export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef, AboutRef, ContactRef}) {
+export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef, AboutRef, ActivitiesRef, ContactRef}) {
 
     const [active, setActive] = useState("Home");
 
@@ -27,6 +27,7 @@ export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef
         element === "Home" ? ScrollToSection(HomeRef) : ""
         element === "Experience" ? ScrollToSection(ExperienceRef) : ""
         element === "About" ? ScrollToSection(AboutRef) : ""
+        element === "Activities" ? ScrollToSection(ActivitiesRef) : ""
     }
 
     return (

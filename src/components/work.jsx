@@ -2,6 +2,8 @@ import ProjectData from '../assets/data/project.json';
 import Arrow from '../../public/blackarrow.png';
 import { useState } from 'react';
 
+
+
 const Tags = ["All", "Web", "Mobile"]
 
 //animate 
@@ -16,6 +18,7 @@ const items = {
 }
 
 import { motion } from 'motion/react';
+import toast from 'react-hot-toast';
 
 export default function Work({WorkRef}) {
 
@@ -23,6 +26,14 @@ export default function Work({WorkRef}) {
     
     const handleTag = (element) => {
         setTagActive(element)
+    }
+
+    const handleLiveLink = (element) => {
+        const Public = element.public;
+        const Srouce = element.source;
+        const UIPlayground = import.meta.env.VITE_UIPLAYGROUND;
+        
+        Public === false ? toast.error("Not Public") : window.open(UIPlayground)
     }
 
     return (
@@ -66,7 +77,7 @@ export default function Work({WorkRef}) {
                                             <div className='w-2 h-2 rounded-3xl bg-green-400'></div>
                                         </div>
 
-                                        <span onClick={() => alert("Unavailable")} className='font-[Inter] text-[13px] flex items-center justify-center gap-1 hover:text-purple-600 transition duration-200 cursor-pointer'>Live Demo <img src={Arrow} className='w-2 rotate-30'/></span>
+                                        <span onClick={() => handleLiveLink(element)} className='font-[Inter] text-[13px] flex items-center justify-center gap-1 hover:text-purple-600 transition duration-200 cursor-pointer'>Live Demo <img src={Arrow} className='w-2 rotate-30'/></span>
 
                                         <span className='font-[Inter] text-[13px]'>Web-App</span>
                                     </header>
