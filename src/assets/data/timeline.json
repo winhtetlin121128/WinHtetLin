@@ -1,30 +1,8 @@
 [
     {
-        "title" : "Chef Exctive Officer ( CEO )",
+        "title" : "Frontend Developer",
         "status" : "Current Role",
-        "company" : "Gradient Renting",
-        "job" : "Yangon, Myanmar",
-        "description" : "",
-        "type" : "work",
-        "start" : 2026,
-        "end" : "Present"
-    },
-    
-    {
-        "title" : "IT Technician",
-        "status" : "Current Role",
-        "company" : "Yangon Airport Group",
-        "job" : "Yangon, Myanmar",
-        "description" : "",
-        "type" : "work",
-        "start" : 2026,
-        "end" : "Present"
-    },
-
-    {
-        "title" : "Fullstack Developer",
-        "status" : "Current Role",
-        "company" : "Tech Wolves",
+        "company" : "Freelance",
         "job" : "Remote",
         "description" : "Started my journey as a freelance developer. I'm building landing-site, management system ( POS, CMS, ERP ) and some type of websites with profit or software rent service. For Free Community I just giving sponsor to them. I'm working with some clients.",
         "type" : "work",

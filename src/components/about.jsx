@@ -41,9 +41,9 @@ const Pargraph = ["I focus on how can be easy to use and how much useful for rea
 
 const Languages = ["Python", "JavaScript", "TypeScript"]
 const FontendCore = ["React", "TypeScript", "TailwindCss", "NextJS", "Python", "HTML5", "CSS3", "JavaScript", "Node", "Express", "Postgresql", "Mongo", "Motion", "Prisma"];
-const Tools = ["VsCode", "Figma", "Git", "GitHub", "Postman", "Codex", "Cursor", "OpenCode"]
+const Tools = ["VsCode", "Figma", "Git", "GitHub", "Postman", "Vercel", "Railway", "Neon", "Codex", "Cursor", "OpenCode"]
 
-const { React, TypeScript, TailwindCss, NextJS, Python, HTML5, CSS3, JavaScript, Node, Express, Postgresql, Mongo, Motion, Prisma, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode } =  Icons;
+const { React, TypeScript, TailwindCss, NextJS, Python, HTML5, CSS3, JavaScript, Node, Express, Postgresql, Mongo, Motion, Prisma, Vercel, Railway, Neon, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode } =  Icons;
 
 
 export default function AboutPage({AboutRef}) {

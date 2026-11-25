@@ -11,9 +11,9 @@ export default function IdCard() {
         transition={{
             delay: 3.9
         }}
-        className="floating-card w-full h-full -mt-10 lg:flex justify-center items-center select-none hidden relative">
+        className="floating-card w-full h-full -mt-10 lg:flex justify-center items-center select-none relative">
             <div className='bg-[#000000]/80 w-12 h-47 absolute z-20 -top-42.5 rounded-sm'></div>
-            <div className="w-75 h-100 flex flex-col items-center shadow-lg bg-gray-200 rounded-2xl overflow-hidden">
+            <div className="floating-main-card w-75 h-100 flex flex-col items-center shadow-lg bg-gray-200 rounded-2xl overflow-hidden">
                 <div className='w/-[100%] relative'>
                     <div className='absolute w-20 h-1.5 bg-[#ffffff] top-2 left-27.5 rounded-3xl'></div>
                     <img src={MiPhoto} className='w-80 relative z-0'/>
@@ -25,7 +25,7 @@ export default function IdCard() {
                     </section>
 
                     <section className='w-[50%] h-full flex justify-end items-end p-3'>
-                        <span className='font-[Inter] text-[11px] text-[#000000]/60'>ID : 05698</span>
+                        <span className='font-[Inter] text-[11px] text-[#000000]/60'>Yangon, Myanmar</span>
                     </section>
                 </div>
             </div>

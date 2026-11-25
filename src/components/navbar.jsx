@@ -31,7 +31,7 @@ export default function Navbar({ScrollToSection, HomeRef, WorkRef, ExperienceRef
     }
 
     return (
-        <div className="w-full sticky top-0 z-50 flex justify-center h-18 items-center lg:pt-3">
+        <div className="w-full sticky top-0 z-50 flex justify-center h-18 items-center lg:pt-3 backdrop-blur-lg">
             <motion.nav 
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0, }}

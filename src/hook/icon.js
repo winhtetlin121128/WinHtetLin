@@ -14,6 +14,9 @@ import { default as Postgresql } from '../assets/icon/Postgresql.png';
 import { default as Mongo } from '../assets/icon/Mongo.png';
 import { default as Motion} from '../assets/icon/Motion.png';
 import { default as Prisma } from '../assets/icon/Prisma.png';
+import { default as Vercel } from '../assets/icon/vercel.svg';
+import { default as Railway } from '../assets/icon/railway.svg';
+import { default as Neon } from '../assets/icon/neon.svg';
 import { default as VsCode } from '../assets/icon/VsCode.png';
 import { default as Figma } from '../assets/icon/Figma.png';
 import { default as Git } from '../assets/icon/Git.png';
@@ -24,4 +27,4 @@ import { default as Cursor } from '../assets/icon/cursor.png';
 import { default as OpenCode } from '../assets/icon/opencode.png';
 
 
-export default { React, TypeScript, TailwindCss, NextJS, Python, HTML5, CSS3, JavaScript, Node, Express, Postgresql, Mongo, Motion, Prisma, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode};
+export default { React, TypeScript, TailwindCss, NextJS, Python, HTML5, CSS3, JavaScript, Node, Express, Postgresql, Mongo, Motion, Prisma, Vercel, Railway, Neon, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode};

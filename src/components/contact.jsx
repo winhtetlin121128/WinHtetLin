@@ -3,6 +3,7 @@ import { React, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Arrow from '../../public/blackarrow.png';
 import resume from '../../public/Win_Htet_Lin.pdf';
+import Clipboard from '../../public/clipboard.png';
 import toast from 'react-hot-toast';
 import { motion } from 'motion/react';
 
@@ -24,12 +25,20 @@ export default function Contact({ContactRef}) {
     const [message, setMessage] = useState('');
 
     const handleToClipBoard = (e) => {
-        const InputValue = e.target.innerText;
-        navigator.clipboard.writeText(InputValue)
 
-        e.target.innerText = "copied";
+        const InputValue = e;
+        const Phone = "+959757726914";
+        const Email = "winhtetlin162026@gmail.com"
 
-
+        if(InputValue === "Phone") {
+            navigator.clipboard.writeText(Phone)
+            toast.success("Copied")
+        }
+        if(InputValue === "Email") {
+            navigator.clipboard.writeText(Email)
+            toast.success("Copied")
+        }
+        
     }
 
     const LinkedinProfile = import.meta.env.VITE_LINKEDIN_URL;
@@ -103,8 +112,8 @@ export default function Contact({ContactRef}) {
                             <motion.div 
                             variants={items}
                             className='flex gap-2'>
-                                <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">+959757726914</span>
-                                <span onClick={handleToClipBoard} className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff]">winhtetlin162026@gmail.com</span>
+                                <span className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-3 items-center">+959757726914 <img  onClick={() => handleToClipBoard("Phone")} src={Clipboard} className='w-3 cursor-pointer'/></span>
+                                <span className="border border-[#000]/20 pl-4 pr-4 pt-3 pb-3 font-[Inter] text-[13px] bg-[#fff] flex justify-center gap-3 items-center ">winhtetlin162026@gmail.com <img onClick={() => handleToClipBoard("Email")} src={Clipboard} className='w-3 cursor-pointer'/></span>
                             </motion.div>
                         </motion.div>
 
